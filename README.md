@@ -1,33 +1,12 @@
+# Dynamic Entities Demo
 
-# Alexa Skill Building Cookbook
+## What You Will Need
+*  [Amazon Developer Account](http://developer.amazon.com/alexa)
+*  (Optional) [Amazon Web Services Account](http://aws.amazon.com/)
+*  The sample code on [GitHub](https://github.com/alexa/alexa-cookbook/tree/master/feature-demos/skill-demo-dynamic-entities/).
 
-<div style="border-style: solid; border-color: black; text-align: center; background-color: lightgreen; padding: 5px;">Please note that the Alexa Cookbook has recently been reorganized.  If you cannot find what you're looking for, try a repo search first, and if that doesn't help, please open an <a href="./issues/new?template=cannot_find.md">issue</a> and we'll do our best to help.</div>
+## Setting Up the Demo
+This folder contains the interaction model and skill code.  It is structured to make it easy to deploy if you have the ASK CLI already setup.  If you would like to use the Developer Portal, you can follow the steps outlined in the [Hello World](https://github.com/alexa/skill-sample-nodejs-hello-world) example, substituting the [Model](./models/en-US.json) and the [skill code](./lambda/custom/index.js) when called for. (Remember to also copy the localisation.js file too!)
 
-### Welcome!
-
-These folders contain short code samples that show you how to add features to an Alexa skill.
-Let's assume we are a chef, with an idea for a fancy new recipe.
-The recipe will require one or more ingredients to be combined to create the finished product.
-Alexa skills follow the same model. Basic ingredients can be added together to create a robust skill.
-This Cookbook is a desk reference for other Alexa skill design materials.
-
-#### Table of Contents <a id="toc"></a>
- + [feature-demos](feature-demos) are demos focused on demonstrating a specific feature
- + [guides](guides) contains supplemental guides to address specific use cases
- + [tools](tools) contains utilities and tools which help make skill building or operating easier.
-
-
-#### Before Cooking (prerequisites)
-
-Recommended:
-* You should have some experience with scripting or Javascript programming.
-* Review and install developer utilities from the [tools](/tools#title) folder
-
-#### After Cooking (testing)
-
-* Review the [guides/testing](guides/testing) folder for various ways you can test your skill during development.
-
-<hr />
-
-Back to the [github.com/alexa](https://github.com/alexa) home page.
-
+## Running the Demo
+To start the demo say "alexa open dynamic entities demo".  Start by adding dynamic entities by saying e.g. "add saturn", "add venus", etc. When you're done adding entities you can say "check" and the entity name to verify it has been incorporated as a dynamic entity, e.g. you can say "check saturn" and Alexa will tell you if it's a static or a dynamic entity (an unmatched entity will trigger the fallback intent).
